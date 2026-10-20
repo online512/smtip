@@ -1,296 +1,532 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head><!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1444292277839914');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1444292277839914&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smriti Tips </title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Ishani Saxena</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <style>
-        :root {
-            --primary: #652802;
-            --secondary: #045972;
-            --accent: #000000;
-            --bg: #020617;
-            --text: #e5e7eb;
-        }
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1444292277839914');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" 
+         src="https://www.facebook.com/tr?id=1444292277839914&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Special+Elite&display=swap" rel="stylesheet">
 
-        body {
-            background: radial-gradient(1200px 600px at top, var(--secondary), var(--bg));
-            color: var(--text);
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+  <style>
+    :root {
+      --leather-amber: #d97706;
+      --brass-gold: #f59e0b;
+      --parchment-cream: #fef3c7;
+      --dark-leather: #0b0d0e;
+      --diary-mat: rgba(14, 18, 20, 0.94);
+      --border-brass: rgba(245, 158, 11, 0.32);
+      --text-white: #ffffff;
+      --text-dim: #94a3b8;
+    }
 
-        .bg-blur {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
 
-        .bg-blur span {
-            position: absolute;
-            width: 280px;
-            height: 280px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            filter: blur(120px);
-            opacity: .35;
-            animation: float 12s infinite alternate ease-in-out;
-        }
+    body {
+      background-color: var(--dark-leather);
+      color: var(--text-white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 14px;
+      overflow-x: hidden;
+      position: relative;
+    }
 
-        .bg-blur span:nth-child(1) {
-            top: 10%;
-            left: 5%;
-        }
+    /* Ambient Warm Turf & Pitch Atmosphere */
+    .pitch-backdrop {
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 50% 10%, rgba(217, 119, 6, 0.16), transparent 60%),
+        radial-gradient(circle at 50% 90%, rgba(16, 185, 129, 0.14), transparent 65%),
+        #070809;
+      z-index: -2;
+    }
 
-        .bg-blur span:nth-child(2) {
-            bottom: 15%;
-            right: 10%;
-            animation-delay: 3s;
-        }
+    /* Vintage Paper Grain Line Texture */
+    .ledger-grid {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(245, 158, 11, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(245, 158, 11, 0.02) 1px, transparent 1px);
+      background-size: 32px 32px;
+      z-index: -1;
+      pointer-events: none;
+    }
 
-        @keyframes float {
-            from {
-                transform: translateY(0)
-            }
+    /* Leather-Bound Diary Frame */
+    .diary-binder {
+      width: 100%;
+      max-width: 420px;
+      background: var(--diary-mat);
+      border: 1px solid var(--border-brass);
+      border-radius: 26px;
+      padding: 38px 24px 30px;
+      text-align: center;
+      position: relative;
+      box-shadow: 
+        0 30px 80px -15px rgba(0, 0, 0, 0.98),
+        0 0 35px rgba(245, 158, 11, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      animation: diaryOpen 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
 
-            to {
-                transform: translateY(-60px)
-            }
-        }
+    @keyframes diaryOpen {
+      from { opacity: 0; transform: translateY(28px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
 
-        .hero {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-        }
+    /* Top Embossed Leather Stamp */
+    .diary-stamp {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      padding: 5px 15px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--brass-gold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
 
-        .card {
-            max-width: 520px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.06);
-            backdrop-filter: blur(14px);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 28px;
-            padding: 36px 28px 32px;
-            text-align: center;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, .45);
-            animation: cardIn .9s ease-out;
-        }
+    .pulse-seal {
+      width: 7px;
+      height: 7px;
+      background: #22c55e;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #22c55e;
+      animation: sealPulse 1.4s infinite;
+    }
 
-        @keyframes cardIn {
-            from {
-                opacity: 0;
-                transform: translateY(40px) scale(.96)
-            }
+    @keyframes sealPulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.35); opacity: 0.4; }
+    }
 
-            to {
-                opacity: 1;
-                transform: none
-            }
-        }
+    /* Monogram Wax Seal Dock for img/tctd.jpg */
+    .wax-seal-dock {
+      position: relative;
+      width: 115px;
+      height: 115px;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        .badge {
-            display: inline-block;
-            padding: 8px 16px;
-            border-radius: 999px;
-            background: rgba(34, 197, 94, .15);
-            color: #86efac;
-            font-size: 13px;
-            margin-bottom: 16px;
-        }
+    .seal-halo-orbit {
+      position: absolute;
+      inset: -5px;
+      border-radius: 50%;
+      background: conic-gradient(from 0deg, var(--brass-gold), #78350f, var(--parchment-cream), var(--brass-gold));
+      animation: spinWax 6s linear infinite;
+      filter: blur(5px);
+      opacity: 0.85;
+    }
 
-        /* Center circular image on top */
-        .card .heading-img {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 20px;
-            border-radius: 50%;
-            display: block;
-            object-fit: cover;
-            animation: imgFade 1s ease-out;
-        }
+    @keyframes spinWax {
+      100% { transform: rotate(360deg); }
+    }
 
-        @keyframes imgFade {
-            from {
-                opacity: 0;
-                transform: translateY(-20px)
-            }
+    .seal-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #0d1114;
+      border: 3px solid #070809;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      box-shadow: 0 0 25px rgba(245, 158, 11, 0.3);
+    }
 
-            to {
-                opacity: 1;
-                transform: translateY(0)
-            }
-        }
+    .seal-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-        h1 {
-            font-size: 40px;
-            line-height: 1.1;
-            font-weight: 800;
-            margin-bottom: 12px;
-        }
+    .seal-fallback {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--brass-gold);
+      display: none;
+    }
 
-        .sub {
-            font-size: 15px;
-            opacity: .85;
-            margin-bottom: 26px;
-        }
+    /* Elegant Journal Headline */
+    .diary-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.95rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      text-transform: capitalize;
+      background: linear-gradient(180deg, #ffffff 40%, var(--parchment-cream) 80%, var(--brass-gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 4px;
+    }
 
-        .timer {
-            font-size: 14px;
-            margin-bottom: 18px;
-        }
+    .diary-sub {
+      font-family: 'Special Elite', cursive, sans-serif;
+      font-size: 0.78rem;
+      color: var(--brass-gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
 
-        .timer span {
-            font-weight: 700;
-            color: #86efac;
-            font-size: 18px;
-        }
+    .diary-bio {
+      font-size: 0.88rem;
+      color: var(--text-dim);
+      line-height: 1.55;
+      margin-bottom: 22px;
+      padding: 0 4px;
+    }
 
-        .cta {
-            display: flex;
-            justify-content: center;
-        }
+    /* Authentic Journal Match Notes Strip */
+    .ledger-notes {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+      text-align: left;
+    }
 
-        a.button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 16px 26px;
-            border-radius: 16px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: #ffffff;
-            font-weight: 800;
-            text-decoration: none;
-            border: 2px solid white;
-            box-shadow: 0 20px 40px rgba(34, 197, 94, .45);
-            transform: translateZ(0);
-            transition: .3s ease;
-        }
+    .ledger-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 11px 14px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      transition: border-color 0.2s;
+    }
 
-        a.button:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 28px 60px rgba(101, 13, 13, 0.65);
-        }
+    .ledger-item:hover {
+      border-color: rgba(245, 158, 11, 0.4);
+    }
 
-        .note {
-            margin-top: 18px;
-            font-size: 13px;
-            opacity: .75;
-        }
+    .ledger-icon {
+      width: 22px;
+      height: 22px;
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--parchment-cream);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
 
-        .disclaimer {
-            margin-top: 22px;
-            padding-top: 16px;
-            border-top: 1px dashed rgba(255, 255, 255, .25);
-            font-size: 12px;
-            line-height: 1.6;
-            opacity: .75;
-        }
+    /* Clean Telegram Button (No Inline Lead Event) */
+    .btn-diary-tg {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      padding: 18px;
+      background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #0284c7 100%);
+      color: #ffffff;
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-decoration: none;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(217, 119, 6, 0.4);
+      overflow: hidden;
+      transition: all 0.25s ease;
+      animation: pulseBtn 2.4s infinite ease-in-out;
+    }
 
-        @media(max-width:480px) {
-            h1 {
-                font-size: 22px
-            }
+    @keyframes pulseBtn {
+      0%, 100% {
+        box-shadow: 0 10px 28px rgba(217, 119, 6, 0.4);
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 0 14px 40px rgba(217, 119, 6, 0.65), 0 0 20px rgba(245, 158, 11, 0.35);
+        transform: scale(1.02);
+      }
+    }
 
-            .card {
-                padding: 30px 20px
-            }
+    .btn-diary-tg::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+      transform: skewX(-25deg);
+      animation: sweepSheen 3s infinite;
+    }
 
-            .card .heading-img {
-                width: 100px;
-                height: 100px
-            }
-        }
-    </style>
+    @keyframes sweepSheen {
+      0% { left: -120%; }
+      30%, 100% { left: 150%; }
+    }
+
+    .btn-diary-tg svg {
+      width: 24px;
+      height: 24px;
+      fill: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .btn-diary-tg:hover {
+      filter: brightness(1.1);
+      transform: translateY(-2px);
+    }
+
+    .security-stamp {
+      font-size: 0.74rem;
+      color: #64748b;
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* Policy & Compliance Links */
+    .legal-strip {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 11px;
+      color: #64748b;
+      width: 100%;
+      text-align: center;
+    }
+
+    .legal-nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 8px 0;
+      flex-wrap: wrap;
+      font-size: 11.5px;
+      font-weight: 500;
+    }
+
+    .legal-nav a {
+      color: #38bdf8;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+  <script src="https://dash.vortexwin.online/api/track/embed.js?v=3" async></script>
 </head>
-
 <body>
-    <div class="hero">
-        <div class="bg-blur">
-            <span></span>
-            <span></span>
-        </div>
-        <div class="card">
-            <div class="badge">Smriti Tips 🥰</div>
-            <!-- Center circular image on top of heading -->
-            <img src="https://raw.githubusercontent.com/online512/smtip/9be6ed39bc679898202b01e56b107dc70ba2a49e/photo_2026-10-16_10-04-47.jpg" alt="cricketIllustration" class="heading-img">
-            <h1>Smriti Tips 🥰</h1>
-            <p class="sub">Honest analysis • Match insights • Community driven</p>
-            <div class="timer">FREE JOINING ENDS IN <span id="countdown">60</span>s</div>
-            <div class="cta">
-                <a href="https://t.me/+j_Oj6gzM4A44ZTA1" class="button">Subscibe Now For Free <i
-                        class="fa fa-telegram"></i></a>
-            </div>
-            
-            <div class="note">
-   
+
+  <!-- Ambient Backdrop -->
+  <div class="pitch-backdrop"></div>
+  <div class="ledger-grid"></div>
+
+  <!-- Primary Diary Binder -->
+  <main class="diary-binder">
+
+    <!-- Active Seal Stamp -->
+    <div class="diary-stamp">
+      <span class="pulse-seal"></span>
+      Official Cricket Journal
     </div>
-            <div class="disclaimer">Disclaimer: This channel shares cricket updates, analysis, and general information
-                for fans. It does not promote betting or gambling. No outcomes are guaranteed. Please verify
-                independently and act responsibly.</div>
-        </div>
+
+    <!-- Wax Seal Dock with img/tctd.jpg -->
+    <div class="wax-seal-dock">
+      <div class="seal-halo-orbit"></div>
+      <div class="seal-inner">
+        <img 
+          id="tctd-logo"
+          class="seal-img" 
+          src="img/tctd.jpg" 
+          alt="The Cricket Tipster’s Diary"
+          onerror="handleTctdFallback(this);"
+        >
+        <span id="tctd-fallback-monogram" class="seal-fallback">TCTD</span>
+      </div>
     </div>
-    <script>
-        let remainingSeconds = 20;
-        const el = document.getElementById('countdown');
-        function tick() { el.textContent = remainingSeconds; remainingSeconds--; if (remainingSeconds < 0) remainingSeconds = 60; }
-        tick();
-        setInterval(tick, 1000);
-    </script>
 
+    <!-- Title & Brand Details -->
+    <h1 class="diary-title">Ishani Saxena Tips</h1>
+    <div class="diary-sub"> Verified Match Intelligence</div>
 
+    <!-- Meta-Safe Subheading Copy -->
+    <p class="diary-bio">
+      Join the verified community of Ishani Saxena on Telegram for detailed tournament breakdowns, pitch reports, and live match bulletins.
+    </p>
 
+    <!-- Ledger Match Notes (Clean points, no score tables) -->
+    <div class="ledger-notes">
+      <div class="ledger-item">
+        <span class="ledger-icon">🏏</span>
+        <span>International &amp; League Tournament Research</span>
+      </div>
+      <div class="ledger-item">
+        <span class="ledger-icon">⚡</span>
+        <span>Instant Free Access to VIP Community</span>
+      </div>
+    </div>
 
-    <script>
-        // Store fbclid & utm_campaign
-        const params = new URLSearchParams(window.location.search);
-        if (params.get("fbclid")) localStorage.setItem("fbclid", params.get("fbclid"));
-        if (params.get("utm_campaign")) localStorage.setItem("utm_campaign", params.get("utm_campaign"));
+    <!-- Clean Telegram CTA Button (No Inline Lead Event) -->
+    <a 
+      href="https://t.me/+yOk7XFh_-Ts0ODU1" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="btn-diary-tg"
+    >
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+      </svg>
+      Open Official Telegram
+    </a>
 
-        // CTA click
-        document.getElementById("joinBtn").addEventListener("click", function (e) {
-            e.preventDefault();
-            const baseTgLink = this.dataset.tg;
-            const eventId = "tg_" + Date.now(); // unique event_id
+    <div class="security-stamp">
+      🔒 Instant Redirect to Telegram App
+    </div>
 
-            fbq("track", "InitiateCheckout", {}, { eventID: eventId });
-            localStorage.setItem("event_id", eventId);
+    <!-- Compliance Legal Section -->
+    <div class="legal-strip">
+      <div class="legal-nav">
+        <a href="javascript:void(0)" onclick="window.pgOpenModal('privacy')">Privacy Policy</a>
+        <span>•</span>
+        <a href="javascript:void(0)" onclick="window.pgOpenModal('terms')">Terms &amp; Conditions</a>
+        <span>•</span>
+        <a href="javascript:void(0)" onclick="window.pgOpenModal('disclaimer')">Disclaimer</a>
+      </div>
+      <p style="margin: 0; font-size: 10px; opacity: 0.7; line-height: 1.4;">
+        Disclaimer: Not affiliated with Telegram, ICC, BCCI, Meta Platforms, Inc., or Facebook. • © 2026 crickettipstersdiary.online
+      </p>
+    </div>
 
-            // redirect user to Telegram
-            setTimeout(() => { window.location.href = baseTgLink + "?start=" + eventId; }, 200);
+  </main>
+
+  <!-- BEGIN PIXELGUARD POLICY MODALS & SCRIPTS -->
+  <div id="pg-policy-modal-overlay" style="display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(4px); z-index: 999999; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+    <div style="background: #0f1316; border: 1px solid #2d3748; border-radius: 16px; max-width: 620px; width: 100%; max-height: 85vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8); text-align: left;">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid #1a202c; background: #090c0e;">
+        <h3 id="pg-modal-title" style="margin: 0; font-size: 16px; font-weight: 700; color: #f8fafc;">Legal Policy</h3>
+        <button type="button" onclick="window.pgCloseModal()" style="background: transparent; border: none; color: #94a3b8; font-size: 24px; line-height: 1; cursor: pointer; padding: 0 6px;">×</button>
+      </div>
+      <div id="pg-modal-body" style="padding: 20px; overflow-y: auto; font-size: 13px; line-height: 1.6; color: #cbd5e1; max-height: 60vh;"></div>
+      <div style="padding: 12px 20px; border-top: 1px solid #1a202c; background: #090c0e; display: flex; justify-content: flex-end;">
+        <button type="button" onclick="window.pgCloseModal()" style="background: #d97706; color: #fff; border: none; padding: 8px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var logoFallbacks = [
+      'img/tctd.jpg',
+      'img/Tctd.jpg',
+      'img/tctd.jpeg',
+      'img/Tctd.jpeg',
+      'img/tctd.png',
+      'tctd.jpg',
+      'Tctd.jpg'
+    ];
+    var fallbackIndex = 0;
+
+    function handleTctdFallback(imgEl) {
+      fallbackIndex++;
+      if (fallbackIndex < logoFallbacks.length) {
+        imgEl.src = logoFallbacks[fallbackIndex];
+      } else {
+        imgEl.style.display = 'none';
+        var fallbackMonogram = document.getElementById('tctd-fallback-monogram');
+        if (fallbackMonogram) fallbackMonogram.style.display = 'block';
+      }
+    }
+  </script>
+
+  <script id="pg-policy-script">
+    (function () {
+      var contentMap = {
+        privacy: {
+          title: 'Privacy Policy',
+          body: '<h4 style="color:#f59e0b;margin-bottom:8px;">1. Introduction</h4><p style="margin-bottom:14px;">We respect your privacy and are committed to protecting your personal data. This privacy policy explains how we collect and protect your information when you visit our website.</p><h4 style="color:#f59e0b;margin-bottom:8px;">2. Information We Collect</h4><p style="margin-bottom:14px;">We may collect basic technical data including IP addresses, browser types, referral URLs, and interactions with buttons/links for analytical and quality improvement purposes.</p><h4 style="color:#f59e0b;margin-bottom:8px;">3. Cookies & Advertising Pixels</h4><p style="margin-bottom:14px;">Our website utilizes standard measurement technologies including Meta Pixels and cookies to analyze audience reach and measure ad campaign performance.</p><h4 style="color:#f59e0b;margin-bottom:8px;">4. Data Protection</h4><p>We implement strict security practices to keep your data safe. We never sell, rent, or distribute personal information to unauthorized third parties.</p>'
+        },
+        terms: {
+          title: 'Terms & Conditions',
+          body: '<h4 style="color:#f59e0b;margin-bottom:8px;">1. Agreement to Terms</h4><p style="margin-bottom:14px;">By accessing or using our services, you agree to comply with these terms, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.</p><h4 style="color:#f59e0b;margin-bottom:8px;">2. Permitted Use</h4><p style="margin-bottom:14px;">This website and its materials are provided solely for personal, non-commercial informational use.</p><h4 style="color:#f59e0b;margin-bottom:8px;">3. Disclaimer of Warranties</h4><p>The information on this website is provided "as is". We make no warranties, expressed or implied, regarding accuracy or fitness for a particular purpose.</p>'
+        },
+        disclaimer: {
+          title: 'Advertising Non-Affiliation Disclaimer',
+          body: '<h4 style="color:#d97706;margin-bottom:8px;">Non-Affiliation Notice</h4><p style="margin-bottom:14px;">This website is NOT owned, operated, endorsed by, or affiliated with Telegram FZ-LLC, ICC, BCCI, Meta Platforms, Inc., or Facebook in any way.</p><p>TELEGRAM, FACEBOOK, and META are registered trademarks of their respective owners.</p>'
+        }
+      };
+      window.pgOpenModal = function (type) {
+        var modal = document.getElementById('pg-policy-modal-overlay');
+        var titleEl = document.getElementById('pg-modal-title');
+        var bodyEl = document.getElementById('pg-modal-body');
+        if (!modal || !titleEl || !bodyEl) return;
+        var data = contentMap[type] || contentMap.privacy;
+        titleEl.textContent = data.title;
+        bodyEl.innerHTML = data.body;
+        modal.style.display = 'flex';
+      };
+      window.pgCloseModal = function () {
+        var modal = document.getElementById('pg-policy-modal-overlay');
+        if (modal) modal.style.display = 'none';
+      };
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') window.pgCloseModal();
+      });
+      var overlay = document.getElementById('pg-policy-modal-overlay');
+      if (overlay) {
+        overlay.addEventListener('click', function (e) {
+          if (e.target === overlay) window.pgCloseModal();
         });
-    </script>
+      }
+    })();
+  </script>
+  <!-- END PIXELGUARD POLICY MODALS & SCRIPTS -->
 
 </body>
-
 </html>
